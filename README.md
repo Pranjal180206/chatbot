@@ -28,24 +28,6 @@ Before you begin, ensure you have the following installed on your machine:
 - **Python** (v3.8 or higher) & **pip** - [Download here](https://www.python.org/downloads/)
 - **Ollama** - [Download & Installation Guide](https://ollama.ai/)
 
-## Project Structure
-.
-├── 📁 backend/
-│   ├── app.py               # Flask backend server & API routes
-│   └── requirements.txt     # Python dependencies
-├── 📁 frontend/
-│   ├── 📁 node_modules/     # Auto-generated (do not edit)
-│   ├── 📁 public/           # Static assets
-│   ├── 📁 src/
-│   │   ├── App.css          # Comprehensive styles for the entire app
-│   │   ├── App.js           # Main React application component
-│   │   ├── Chat.js          # Core chat component with streaming logic
-│   │   └── index.js         # React application entry point
-│   ├── package-lock.json    # Auto-generated (exact dependency tree)
-│   └── package.json         # Frontend dependencies and scripts
-└── 📄 README.md             # Project documentation
-
-
 ## Installation & Setup
 
 Follow these steps to get the project running locally.
@@ -53,15 +35,13 @@ Follow these steps to get the project running locally.
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
-cd <your-repo-name>
+git clone https://github.com/Pranjal180206/chatbot.git
 ```
 
 ### 2. Set Up the AI Backend (Ollama)
 
 First, pull the required model using Ollama:
 ```bash
-
 ollama pull gemma3
 ```
 
@@ -71,7 +51,6 @@ Then, start the Ollama service (it usually runs in the background after installa
 
 #### 1. Navigate to the backend directory:
 ``` bash
-
 cd backend
 ```
 
