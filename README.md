@@ -99,3 +99,24 @@ The frontend will start on `http://localhost:3000` and should automatically open
 
 4. Watch as the AI streams its response back in real-time!
 
+## Trade-Offs and Design Decisions
+
+### 1. Language Choice
+
+- Backend in Python (Flask) leverages Python’s ML ecosystem.
+
+- Frontend in React for modular UI.
+
+- Trade-off: Two runtimes (Node.js and Python) increase deployment complexity.
+
+### 2. Separation of Concerns
+
+- Independent frontend and backend allows scaling and flexibility.
+
+- Trade-off: Requires handling CORS and two separate dev servers.
+
+### 3. Local Inference vs. External API
+
+- Local inference avoids API costs and works offline.
+
+- Trade-off: Resource heavy and harder to replicate across environments.
