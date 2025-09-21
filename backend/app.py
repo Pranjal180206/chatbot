@@ -14,13 +14,21 @@ model = "gemma3"
 def chat():
     data = request.get_json()
     prompt = data.get("prompt", "")
+
+    system_prompt = """
+    You are a helpful, friendly AI assistant.
+    Always be concise and clear in your responses.
+    If you're unsure about the answer, say "I don't know" or "I'm not sure".
+    Keep your responses short and to the point.
+    """
     
     def response():
         try:
             # Stream response from Ollama
             for chunk in client.generate(
                 model=model, 
-                prompt=prompt,  
+                prompt=prompt,
+                system=system_prompt,
                 stream=True
             ):
                 # Format as Server-Sent Events
