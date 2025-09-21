@@ -7,18 +7,18 @@ A modern, full-stack chatbot application that leverages a local large language m
 
 ## Features
 
-- ** Local AI Power:** Utilizes Ollama and the `gemma3` model for 100% private, offline inference. No API keys or internet required after setup.
-- ** Real-Time Streaming:** Experience the AI typing responses in real-time using Server-Sent Events (SSE) for a seamless and engaging user experience.
-- ** AI-Assisted Frontend Design:** The entire user interface, including its modern color scheme, gradients, and responsive layout, was designed with the assistance of AI tools to ensure a professional and aesthetically pleasing result.
-- ** Responsive Design:** A polished, dark-themed UI that looks great on desktop, tablet, and mobile devices.
-- ** Modern Chat UI:** Features message bubbles, a typing indicator, and auto-scrolling to the latest message.
+- Local AI Power: Utilizes Ollama and the `gemma3` model for 100% private, offline inference. No API keys or internet required after setup.
+- Real-Time Streaming: Experience the AI typing responses in real-time using Server-Sent Events (SSE) for a seamless and engaging user experience.
+- AI-Assisted Frontend Design: The entire user interface, including its modern color scheme, gradients, and responsive layout, was designed with the assistance of AI tools to ensure a professional and aesthetically pleasing result.
+- Responsive Design: A polished, dark-themed UI that looks great on desktop, tablet, and mobile devices.
+- Modern Chat UI: Features message bubbles, a typing indicator, and auto-scrolling to the latest message.
 
 ## Tech Stack
 
-- **Frontend:** React, JavaScript (ES6+), CSS3 with Custom Properties (Variables)
-- **Backend:** Flask (Python), Flask-CORS
-- **AI Engine:** Ollama (with `gemma3` model)
-- **Communication:** HTTP, Server-Sent Events (SSE) for streaming
+- Frontend: React, JavaScript (ES6+), CSS3 with Custom Properties (Variables)
+- Backend: Flask (Python), Flask-CORS
+- AI Engine: Ollama (with `gemma3` model)
+- Communication: HTTP, Server-Sent Events (SSE) for streaming
 
 ## Prerequisites
 
@@ -29,20 +29,21 @@ Before you begin, ensure you have the following installed on your machine:
 - **Ollama** - [Download & Installation Guide](https://ollama.ai/)
 
 ## Project Structure
+.
 ├── 📁 backend/
-│ ├── app.py # Flask backend server & API routes
-│ └── requirements.txt # Python dependencies
+│   ├── app.py               # Flask backend server & API routes
+│   └── requirements.txt     # Python dependencies
 ├── 📁 frontend/
-│ ├── 📁 node_modules/ # Auto-generated (do not edit)
-│ ├── 📁 public/ # Static assets
-│ ├── 📁 src/
-│ │ ├── App.css # Comprehensive styles for the entire app
-│ │ ├── App.js # Main React application component
-│ │ ├── Chat.js # Core chat component with streaming logic
-│ │ └── index.js # React application entry point
-│ ├── package-lock.json # Auto-generated (exact dependency tree)
-│ └── package.json # Frontend dependencies and scripts
-└── 📄 README.md # This file
+│   ├── 📁 node_modules/     # Auto-generated (do not edit)
+│   ├── 📁 public/           # Static assets
+│   ├── 📁 src/
+│   │   ├── App.css          # Comprehensive styles for the entire app
+│   │   ├── App.js           # Main React application component
+│   │   ├── Chat.js          # Core chat component with streaming logic
+│   │   └── index.js         # React application entry point
+│   ├── package-lock.json    # Auto-generated (exact dependency tree)
+│   └── package.json         # Frontend dependencies and scripts
+└── 📄 README.md             # Project documentation
 
 
 ## Installation & Setup
