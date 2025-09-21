@@ -16,6 +16,25 @@ const Chat = () => {
     scrollToBottom();
   }, [messages]);
 
+  // Format message content with proper line breaks
+  const formatMessage = (content) => {
+    if (!content) return '';
+    
+    // Add line breaks for bullet points
+    let formattedContent = content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    
+    // Handle bullet points with asterisks
+    formattedContent = formattedContent.replace(/\* (.*?)(?=\n|$)/g, '<br/>• $1');
+    
+    // Handle numbered lists
+    formattedContent = formattedContent.replace(/(\d+)\. (.*?)(?=\n|$)/g, '<br/>$1. $2');
+    
+    // Handle line breaks
+    formattedContent = formattedContent.replace(/\n/g, '<br/>');
+    
+    return formattedContent;
+  };
+
   // Handle sending messages to backend
   const sendMessage = async () => {
     if (!inputValue.trim() || isLoading) return;
@@ -115,9 +134,12 @@ const Chat = () => {
             key={index}
             className={`message ${message.type === 'user' ? 'user-message' : 'bot-message'}`}
           >
-            <div className="message-content">
-              {message.content}
-            </div>
+            <div 
+              className="message-content"
+              dangerouslySetInnerHTML={{ 
+                __html: message.type === 'bot' ? formatMessage(message.content) : message.content 
+              }}
+            />
           </div>
         ))}
         

@@ -4,7 +4,7 @@ import ollama
 import json
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for frontend integration
+CORS(app) 
 
 client = ollama.Client()
 
@@ -19,7 +19,6 @@ def chat():
     You are a helpful, friendly AI assistant.
     Always be concise and clear in your responses.
     If you're unsure about the answer, say "I don't know" or "I'm not sure".
-    Keep your responses short and to the point.
     """
     
     def response():
