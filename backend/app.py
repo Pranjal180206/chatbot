@@ -18,7 +18,11 @@ def chat():
     def response():
         try:
             # Stream response from Ollama
-            for chunk in client.generate(model=model, prompt=prompt, stream=True):
+            for chunk in client.generate(
+                model=model, 
+                prompt=prompt,  
+                stream=True
+            ):
                 # Format as Server-Sent Events
                 if 'response' in chunk:
                     sse_data = json.dumps({"response": chunk['response']})
